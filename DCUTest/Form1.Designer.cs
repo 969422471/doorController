@@ -77,6 +77,7 @@
             this.led17 = new DCUTest.Led();
             this.led7 = new DCUTest.Led();
             this.led18 = new DCUTest.Led();
+            this.dO_K1 = new DCUTest.DO_K();
             this.紧急解锁 = new DCUTest.DO_K();
             this.mianBan1 = new DCUTest.mianBan();
             this.groupBox1.SuspendLayout();
@@ -103,9 +104,9 @@
             // 
             // button15
             // 
-            this.button15.Location = new System.Drawing.Point(358, 524);
+            this.button15.Location = new System.Drawing.Point(358, 464);
             this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(75, 23);
+            this.button15.Size = new System.Drawing.Size(75, 83);
             this.button15.TabIndex = 10;
             this.button15.Text = "button15";
             this.button15.UseVisualStyleBackColor = true;
@@ -171,6 +172,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.dO_K1);
             this.groupBox2.Controls.Add(this.紧急解锁);
             this.groupBox2.Location = new System.Drawing.Point(760, 39);
             this.groupBox2.Name = "groupBox2";
@@ -529,6 +531,16 @@
             this.led18.Size = new System.Drawing.Size(59, 60);
             this.led18.TabIndex = 16;
             // 
+            // dO_K1
+            // 
+            this.dO_K1.ButtonName = "button1";
+            this.dO_K1.ButtonTag = 2333;
+            this.dO_K1.Location = new System.Drawing.Point(119, 29);
+            this.dO_K1.Name = "dO_K1";
+            this.dO_K1.Size = new System.Drawing.Size(90, 94);
+            this.dO_K1.TabIndex = 1;
+            this.dO_K1.Tag = "33333";
+            // 
             // 紧急解锁
             // 
             this.紧急解锁.AccessibleName = "紧急解锁";
@@ -627,6 +639,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button15;
         private mianBan mianBan1;
+        private DO_K dO_K1;
     }
 }
 

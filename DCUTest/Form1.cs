@@ -75,6 +75,8 @@ namespace DCUTest
         private void button15_Click(object sender, EventArgs e)
         {
             pictureBox1.Left += 10;//向右移动10个像素
+
+            ///  在哈哈哈啊啊哈啊啊啊哈哈啊哈啊
         }
 
         private void mianBan1_Load(object sender, EventArgs e)
