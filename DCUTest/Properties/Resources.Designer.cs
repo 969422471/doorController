@@ -93,6 +93,16 @@ namespace DCUTest.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap DeskLight_10 {
+            get {
+                object obj = ResourceManager.GetObject("DeskLight_10", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap door {
             get {
                 object obj = ResourceManager.GetObject("door", resourceCulture);
@@ -116,6 +126,16 @@ namespace DCUTest.Properties {
         internal static System.Drawing.Bitmap doorBS3 {
             get {
                 object obj = ResourceManager.GetObject("doorBS3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap DriverLight_10 {
+            get {
+                object obj = ResourceManager.GetObject("DriverLight_10", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

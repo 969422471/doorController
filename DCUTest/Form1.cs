@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DCUTest.MK;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,7 +18,7 @@ namespace DCUTest
         {
             InitializeComponent();
             //do_k = this.紧急解锁;
-            紧急解锁.putname(紧急解锁.Name);
+         //   紧急解锁.putname(紧急解锁.Name);
         }
 
 
@@ -42,7 +43,9 @@ namespace DCUTest
 
         private void button14_Click(object sender, EventArgs e)
         {
-
+           bool a =  GlobalVar.getInstance().Connect("192.168.0.7","26");
+            if (a)
+                button14.BackColor = Color.Green;
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -50,26 +53,16 @@ namespace DCUTest
 
         }
 
+        /// <summary>
+        ///  定时刷新界面获取网络dido的数据
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void timer1_Tick(object sender, EventArgs e)
         {
-            ////timer1事件
-            //if (pictureBox1.Left <= 0)
-            //{
-            //    left = false;//向右移动
-            //}
-            //else if (pictureBox1.Right >= this.Width)
-            //{
-            //    left = true;//向左移动
-            //}
-
-            //if (left == true)
-            //{
-            //    pictureBox1.Left -= 10;//向左移动10个像素
-            //}
-            //else
-            //{
-               
-            //}
+            if (GlobalVar.getInstance().lj) {
+                GlobalVar.getInstance().InQuire();
+            }
         }
 
         private void button15_Click(object sender, EventArgs e)
@@ -89,8 +82,9 @@ namespace DCUTest
             Console.WriteLine("SS"+this.Name);
         }
 
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
 
-
-
+        }
     }
 }

@@ -90,6 +90,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBox1.Controls.Add(this.mianBan1);
             this.groupBox1.Controls.Add(this.button15);
             this.groupBox1.Controls.Add(this.pictureBox1);
@@ -97,7 +99,7 @@
             this.groupBox1.Controls.Add(this.外敏感);
             this.groupBox1.Location = new System.Drawing.Point(25, 39);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(692, 555);
+            this.groupBox1.Size = new System.Drawing.Size(1258, 838);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "门动画演示区域";
@@ -146,9 +148,10 @@
             this.设置ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1270, 25);
+            this.menuStrip1.Size = new System.Drawing.Size(1904, 25);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // 系统ToolStripMenuItem
             // 
@@ -174,9 +177,9 @@
             // 
             this.groupBox2.Controls.Add(this.dO_K1);
             this.groupBox2.Controls.Add(this.紧急解锁);
-            this.groupBox2.Location = new System.Drawing.Point(760, 39);
+            this.groupBox2.Location = new System.Drawing.Point(1341, 39);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(232, 555);
+            this.groupBox2.Size = new System.Drawing.Size(232, 586);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "+";
@@ -184,6 +187,8 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox4.Controls.Add(this.button14);
             this.groupBox4.Controls.Add(this.led1);
             this.groupBox4.Controls.Add(this.led19);
@@ -209,9 +214,9 @@
             this.groupBox4.Controls.Add(this.led17);
             this.groupBox4.Controls.Add(this.led7);
             this.groupBox4.Controls.Add(this.led18);
-            this.groupBox4.Location = new System.Drawing.Point(25, 594);
+            this.groupBox4.Location = new System.Drawing.Point(12, 883);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(1227, 171);
+            this.groupBox4.Size = new System.Drawing.Size(1233, 146);
             this.groupBox4.TabIndex = 29;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "门控器插头状态";
@@ -228,6 +233,8 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox3.Controls.Add(this.button13);
             this.groupBox3.Controls.Add(this.button12);
             this.groupBox3.Controls.Add(this.button11);
@@ -237,9 +244,9 @@
             this.groupBox3.Controls.Add(this.button7);
             this.groupBox3.Controls.Add(this.button6);
             this.groupBox3.Controls.Add(this.button5);
-            this.groupBox3.Location = new System.Drawing.Point(998, 39);
+            this.groupBox3.Location = new System.Drawing.Point(1632, 39);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(260, 555);
+            this.groupBox3.Size = new System.Drawing.Size(260, 586);
             this.groupBox3.TabIndex = 30;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "全自动测试";
@@ -533,8 +540,8 @@
             // 
             // dO_K1
             // 
-            this.dO_K1.ButtonName = "button1";
-            this.dO_K1.ButtonTag = 2333;
+            this.dO_K1.ButtonName = "OneBtn_ItemDO2";
+            this.dO_K1.ButtonTag = 2;
             this.dO_K1.Location = new System.Drawing.Point(119, 29);
             this.dO_K1.Name = "dO_K1";
             this.dO_K1.Size = new System.Drawing.Size(90, 94);
@@ -544,8 +551,8 @@
             // 紧急解锁
             // 
             this.紧急解锁.AccessibleName = "紧急解锁";
-            this.紧急解锁.ButtonName = "ccccc";
-            this.紧急解锁.ButtonTag = 111;
+            this.紧急解锁.ButtonName = "OneBtn_ItemDO3";
+            this.紧急解锁.ButtonTag = 3;
             this.紧急解锁.Location = new System.Drawing.Point(6, 29);
             this.紧急解锁.Name = "紧急解锁";
             this.紧急解锁.Size = new System.Drawing.Size(74, 83);
@@ -554,10 +561,13 @@
             // 
             // mianBan1
             // 
+            this.mianBan1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.mianBan1.AutoSize = true;
-            this.mianBan1.Location = new System.Drawing.Point(551, 28);
+            this.mianBan1.Location = new System.Drawing.Point(1079, 29);
             this.mianBan1.Name = "mianBan1";
-            this.mianBan1.Size = new System.Drawing.Size(127, 518);
+            this.mianBan1.Size = new System.Drawing.Size(141, 533);
             this.mianBan1.TabIndex = 11;
             this.mianBan1.Load += new System.EventHandler(this.mianBan1_Load);
             // 
@@ -565,7 +575,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1270, 770);
+            this.ClientSize = new System.Drawing.Size(1904, 1041);
             this.Controls.Add(this.led25);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox4);

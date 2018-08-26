@@ -83,6 +83,8 @@
     <Compile Include="mianBan.Designer.cs">
       <DependentUpon>mianBan.cs</DependentUpon>
     </Compile>
+    <Compile Include="MK\GlobalVar.cs" />
+    <Compile Include="MK\Relay.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="doorBJ.resx">
@@ -135,6 +137,8 @@
   <ItemGroup>
     <Content Include="img\door.jpg" />
     <None Include="Resources\closseBtnB1.png" />
+    <None Include="Resources\DeskLight_10.PNG" />
+    <None Include="Resources\DriverLight_10.PNG" />
     <Content Include="Resources\openBtnA.png" />
     <None Include="Resources\doorBS.png" />
     <None Include="Resources\closseBtnC.png" />
