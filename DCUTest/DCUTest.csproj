@@ -83,6 +83,7 @@
     <Compile Include="mianBan.Designer.cs">
       <DependentUpon>mianBan.cs</DependentUpon>
     </Compile>
+    <Compile Include="MK\doorCheck.cs" />
     <Compile Include="MK\GlobalVar.cs" />
     <Compile Include="MK\Relay.cs" />
     <Compile Include="Program.cs" />

@@ -37,6 +37,19 @@ namespace DCUTest
             }
         }
 
+        public string ButtonText
+        {
+            get
+            {
+                //TODO
+                return label1.Text;
+            }
+            set
+            {
+                //TODO
+                label1.Text = value;
+            }
+        }
         public int ButtonTag
         {
             get
@@ -57,7 +70,8 @@ namespace DCUTest
         {
             this.label1.Text = this.Name;
           
-            nonParameterThread = new Thread(new ThreadStart(NonParameterRun2));         
+            nonParameterThread = new Thread(new ThreadStart(NonParameterRun2));
+            nonParameterThread.IsBackground = true;//设为 后台线程         
             nonParameterThread.Start();
         }
 
@@ -73,21 +87,27 @@ namespace DCUTest
                         Console.WriteLine(button1.Name);
                         if (GlobalVar.doMap[button1.Name].Equals("1"))
                         {
+                            zt = true; 
                            ledDeleg white = new ledDeleg(LedON);
+                            this.Invoke(white);
                         }
                         else
                         {
-                           ledDeleg white = new ledDeleg(LedOFF);
-                         }
+                            zt = false; // 开关状态
+                           ledDeleg off = new ledDeleg(LedOFF);
+                            this.Invoke(off);
+                        }
                         
                         } catch
                         {
-
-                            MessageBox.Show("控件命名错误！");
+                          // 出现异常后 结束程序避免占用 cpu
+                           nonParameterThread.Abort();
                         }
                 // 控件的刷新频率
                 Thread.Sleep(300);
                 }
+                // 300ms 判断一次 程序是否建立连接
+                Thread.Sleep(300);
             }
           
 
@@ -97,6 +117,7 @@ namespace DCUTest
 
         private void LedON()
         {
+            zt = true;
             Console.WriteLine("ON");
             button1.BackgroundImage = global::DCUTest.Properties.Resources.DriverLight_10;
 
@@ -104,6 +125,7 @@ namespace DCUTest
 
         private void LedOFF()
         {
+            zt = false;
             Console.WriteLine("OFF");
             button1.BackgroundImage = global::DCUTest.Properties.Resources.DeskLight_10;
         }
@@ -113,6 +135,7 @@ namespace DCUTest
 
         }
 
+        private bool zt;
         private void button1_Click(object sender, EventArgs e)
         {
             // 如果连接成功
@@ -136,13 +159,14 @@ namespace DCUTest
                     tag = tag - 30;
                 }
 
-                if (button1.BackgroundImage == global::DCUTest.Properties.Resources.DeskLight_10)
+                if (zt)
                 {
-
+                  //  zt = false;
                     GlobalVar.getInstance().PowerOFF(Address, tag);
                 }
                 else
                 {
+                 //   zt = true;
                     GlobalVar.getInstance().PowerON(Address, tag);
                 }
             }

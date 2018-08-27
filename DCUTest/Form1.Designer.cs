@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.mianBan1 = new DCUTest.mianBan();
             this.button15 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.内敏感 = new System.Windows.Forms.Button();
@@ -39,20 +40,10 @@
             this.设置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.动作时间设置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dO_K1 = new DCUTest.DO_K();
+            this.紧急解锁 = new DCUTest.DO_K();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.button14 = new System.Windows.Forms.Button();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.led25 = new DCUTest.Led();
             this.led1 = new DCUTest.Led();
             this.led19 = new DCUTest.Led();
             this.led2 = new DCUTest.Led();
@@ -77,9 +68,18 @@
             this.led17 = new DCUTest.Led();
             this.led7 = new DCUTest.Led();
             this.led18 = new DCUTest.Led();
-            this.dO_K1 = new DCUTest.DO_K();
-            this.紧急解锁 = new DCUTest.DO_K();
-            this.mianBan1 = new DCUTest.mianBan();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.button13 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.led25 = new DCUTest.Led();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -99,10 +99,22 @@
             this.groupBox1.Controls.Add(this.外敏感);
             this.groupBox1.Location = new System.Drawing.Point(25, 39);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1258, 838);
+            this.groupBox1.Size = new System.Drawing.Size(971, 750);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "门动画演示区域";
+            // 
+            // mianBan1
+            // 
+            this.mianBan1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.mianBan1.AutoSize = true;
+            this.mianBan1.Location = new System.Drawing.Point(794, 29);
+            this.mianBan1.Name = "mianBan1";
+            this.mianBan1.Size = new System.Drawing.Size(127, 545);
+            this.mianBan1.TabIndex = 11;
+            this.mianBan1.Load += new System.EventHandler(this.mianBan1_Load);
             // 
             // button15
             // 
@@ -148,7 +160,7 @@
             this.设置ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1904, 25);
+            this.menuStrip1.Size = new System.Drawing.Size(1772, 25);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -177,13 +189,38 @@
             // 
             this.groupBox2.Controls.Add(this.dO_K1);
             this.groupBox2.Controls.Add(this.紧急解锁);
-            this.groupBox2.Location = new System.Drawing.Point(1341, 39);
+            this.groupBox2.Location = new System.Drawing.Point(1016, 49);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(232, 586);
+            this.groupBox2.Size = new System.Drawing.Size(610, 808);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "+";
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
+            // 
+            // dO_K1
+            // 
+            this.dO_K1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.dO_K1.ButtonName = "OneBtn_ItemDO2";
+            this.dO_K1.ButtonTag = 2;
+            this.dO_K1.ButtonText = "测试";
+            this.dO_K1.Location = new System.Drawing.Point(119, 29);
+            this.dO_K1.Name = "dO_K1";
+            this.dO_K1.Size = new System.Drawing.Size(90, 94);
+            this.dO_K1.TabIndex = 1;
+            this.dO_K1.Tag = "33333";
+            // 
+            // 紧急解锁
+            // 
+            this.紧急解锁.AccessibleName = "紧急解锁";
+            this.紧急解锁.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.紧急解锁.ButtonName = "OneBtn_ItemDO3";
+            this.紧急解锁.ButtonTag = 3;
+            this.紧急解锁.ButtonText = "紧急解锁";
+            this.紧急解锁.Location = new System.Drawing.Point(6, 29);
+            this.紧急解锁.Name = "紧急解锁";
+            this.紧急解锁.Size = new System.Drawing.Size(74, 83);
+            this.紧急解锁.TabIndex = 0;
+            this.紧急解锁.Load += new System.EventHandler(this.紧急解锁_Load);
             // 
             // groupBox4
             // 
@@ -214,9 +251,9 @@
             this.groupBox4.Controls.Add(this.led17);
             this.groupBox4.Controls.Add(this.led7);
             this.groupBox4.Controls.Add(this.led18);
-            this.groupBox4.Location = new System.Drawing.Point(12, 883);
+            this.groupBox4.Location = new System.Drawing.Point(12, 815);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(1233, 146);
+            this.groupBox4.Size = new System.Drawing.Size(1101, 146);
             this.groupBox4.TabIndex = 29;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "门控器插头状态";
@@ -230,120 +267,6 @@
             this.button14.Text = "button14";
             this.button14.UseVisualStyleBackColor = true;
             this.button14.Click += new System.EventHandler(this.button14_Click);
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox3.Controls.Add(this.button13);
-            this.groupBox3.Controls.Add(this.button12);
-            this.groupBox3.Controls.Add(this.button11);
-            this.groupBox3.Controls.Add(this.button10);
-            this.groupBox3.Controls.Add(this.button9);
-            this.groupBox3.Controls.Add(this.button8);
-            this.groupBox3.Controls.Add(this.button7);
-            this.groupBox3.Controls.Add(this.button6);
-            this.groupBox3.Controls.Add(this.button5);
-            this.groupBox3.Location = new System.Drawing.Point(1632, 39);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(260, 586);
-            this.groupBox3.TabIndex = 30;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "全自动测试";
-            // 
-            // button13
-            // 
-            this.button13.Location = new System.Drawing.Point(56, 399);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(157, 40);
-            this.button13.TabIndex = 8;
-            this.button13.Text = "自动敏感胶条检测";
-            this.button13.UseVisualStyleBackColor = true;
-            // 
-            // button12
-            // 
-            this.button12.Location = new System.Drawing.Point(57, 445);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(157, 40);
-            this.button12.TabIndex = 7;
-            this.button12.Text = "门控器检测报告单";
-            this.button12.UseVisualStyleBackColor = true;
-            // 
-            // button11
-            // 
-            this.button11.Location = new System.Drawing.Point(57, 351);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(157, 40);
-            this.button11.TabIndex = 6;
-            this.button11.Text = "自动逃生开关检测";
-            this.button11.UseVisualStyleBackColor = true;
-            // 
-            // button10
-            // 
-            this.button10.Location = new System.Drawing.Point(56, 297);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(157, 40);
-            this.button10.TabIndex = 5;
-            this.button10.Text = "自动紧急解锁探测";
-            this.button10.UseVisualStyleBackColor = true;
-            // 
-            // button9
-            // 
-            this.button9.Location = new System.Drawing.Point(56, 242);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(157, 40);
-            this.button9.TabIndex = 4;
-            this.button9.Text = "自动隔离锁检测";
-            this.button9.UseVisualStyleBackColor = true;
-            // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(57, 185);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(156, 40);
-            this.button8.TabIndex = 3;
-            this.button8.Text = "自动紧急解锁检测";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(57, 134);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(156, 33);
-            this.button7.TabIndex = 2;
-            this.button7.Text = "自动集控开关门检测";
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(56, 79);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(157, 33);
-            this.button6.TabIndex = 1;
-            this.button6.Text = "自动障碍物探测";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(57, 29);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(156, 33);
-            this.button5.TabIndex = 0;
-            this.button5.Text = "自动开关门检测";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // led25
-            // 
-            this.led25.BackColor = System.Drawing.Color.Transparent;
-            this.led25.Location = new System.Drawing.Point(0, 0);
-            this.led25.Name = "led25";
-            this.led25.Size = new System.Drawing.Size(43, 45);
-            this.led25.TabIndex = 31;
             // 
             // led1
             // 
@@ -538,44 +461,128 @@
             this.led18.Size = new System.Drawing.Size(59, 60);
             this.led18.TabIndex = 16;
             // 
-            // dO_K1
+            // groupBox3
             // 
-            this.dO_K1.ButtonName = "OneBtn_ItemDO2";
-            this.dO_K1.ButtonTag = 2;
-            this.dO_K1.Location = new System.Drawing.Point(119, 29);
-            this.dO_K1.Name = "dO_K1";
-            this.dO_K1.Size = new System.Drawing.Size(90, 94);
-            this.dO_K1.TabIndex = 1;
-            this.dO_K1.Tag = "33333";
-            // 
-            // 紧急解锁
-            // 
-            this.紧急解锁.AccessibleName = "紧急解锁";
-            this.紧急解锁.ButtonName = "OneBtn_ItemDO3";
-            this.紧急解锁.ButtonTag = 3;
-            this.紧急解锁.Location = new System.Drawing.Point(6, 29);
-            this.紧急解锁.Name = "紧急解锁";
-            this.紧急解锁.Size = new System.Drawing.Size(74, 83);
-            this.紧急解锁.TabIndex = 0;
-            this.紧急解锁.Load += new System.EventHandler(this.紧急解锁_Load);
-            // 
-            // mianBan1
-            // 
-            this.mianBan1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.mianBan1.AutoSize = true;
-            this.mianBan1.Location = new System.Drawing.Point(1079, 29);
-            this.mianBan1.Name = "mianBan1";
-            this.mianBan1.Size = new System.Drawing.Size(141, 533);
-            this.mianBan1.TabIndex = 11;
-            this.mianBan1.Load += new System.EventHandler(this.mianBan1_Load);
+            this.groupBox3.Controls.Add(this.button13);
+            this.groupBox3.Controls.Add(this.button12);
+            this.groupBox3.Controls.Add(this.button11);
+            this.groupBox3.Controls.Add(this.button10);
+            this.groupBox3.Controls.Add(this.button9);
+            this.groupBox3.Controls.Add(this.button8);
+            this.groupBox3.Controls.Add(this.button7);
+            this.groupBox3.Controls.Add(this.button6);
+            this.groupBox3.Controls.Add(this.button5);
+            this.groupBox3.Location = new System.Drawing.Point(1632, 49);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(128, 576);
+            this.groupBox3.TabIndex = 30;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "全自动测试";
+            // 
+            // button13
+            // 
+            this.button13.Location = new System.Drawing.Point(56, 399);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(157, 40);
+            this.button13.TabIndex = 8;
+            this.button13.Text = "自动敏感胶条检测";
+            this.button13.UseVisualStyleBackColor = true;
+            // 
+            // button12
+            // 
+            this.button12.Location = new System.Drawing.Point(57, 445);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(157, 40);
+            this.button12.TabIndex = 7;
+            this.button12.Text = "门控器检测报告单";
+            this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
+            // 
+            // button11
+            // 
+            this.button11.Location = new System.Drawing.Point(57, 351);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(157, 40);
+            this.button11.TabIndex = 6;
+            this.button11.Text = "自动逃生开关检测";
+            this.button11.UseVisualStyleBackColor = true;
+            // 
+            // button10
+            // 
+            this.button10.Location = new System.Drawing.Point(56, 297);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(157, 40);
+            this.button10.TabIndex = 5;
+            this.button10.Text = "自动紧急解锁探测";
+            this.button10.UseVisualStyleBackColor = true;
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(56, 242);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(157, 40);
+            this.button9.TabIndex = 4;
+            this.button9.Text = "自动隔离锁检测";
+            this.button9.UseVisualStyleBackColor = true;
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(57, 185);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(156, 40);
+            this.button8.TabIndex = 3;
+            this.button8.Text = "自动紧急解锁检测";
+            this.button8.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(57, 134);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(156, 33);
+            this.button7.TabIndex = 2;
+            this.button7.Text = "自动集控开关门检测";
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(56, 79);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(157, 33);
+            this.button6.TabIndex = 1;
+            this.button6.Text = "自动障碍物探测";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(57, 29);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(156, 33);
+            this.button5.TabIndex = 0;
+            this.button5.Text = "自动开关门检测";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 500;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // led25
+            // 
+            this.led25.BackColor = System.Drawing.Color.Transparent;
+            this.led25.Location = new System.Drawing.Point(0, 0);
+            this.led25.Name = "led25";
+            this.led25.Size = new System.Drawing.Size(43, 45);
+            this.led25.TabIndex = 31;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.ClientSize = new System.Drawing.Size(1772, 973);
             this.Controls.Add(this.led25);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox4);
